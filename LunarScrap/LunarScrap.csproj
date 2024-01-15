@@ -1,0 +1,46 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.1</TargetFramework>
+        <AssemblyName>LunarScrap</AssemblyName>
+        <Description>awesrfdgh</Description>
+        <Version>1.0.0</Version>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+        <LangVersion>latest</LangVersion>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="BepInEx.Analyzers" Version="1.*" PrivateAssets="all" />
+        <PackageReference Include="BepInEx.Core" Version="5.*" />
+        <PackageReference Include="BepInEx.PluginInfoProps" Version="1.*" />
+        <PackageReference Include="UnityEngine.Modules" Version="2022.3.9" IncludeAssets="compile" />
+    </ItemGroup>
+
+    <ItemGroup Condition="'$(TargetFramework.TrimEnd(`0123456789`))' == 'net'">
+        <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.2" PrivateAssets="all" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Reference Include="Assembly-CSharp">
+        <HintPath>..\..\..\..\Assembly-CSharp-nstrip.dll</HintPath>
+      </Reference>
+      <Reference Include="BepInEx.MonoMod.HookGenPatcher">
+        <HintPath>..\..\..\..\..\..\AppData\Roaming\r2modmanPlus-local\LethalCompany\profiles\mod tersting\BepInEx\patchers\Evaisa-HookGenPatcher\BepInEx.MonoMod.HookGenPatcher\BepInEx.MonoMod.HookGenPatcher.dll</HintPath>
+      </Reference>
+      <Reference Include="LethalLib">
+        <HintPath>..\..\..\..\LethalLib.dll</HintPath>
+      </Reference>
+      <Reference Include="MMHOOK_Assembly-CSharp">
+        <HintPath>..\..\..\..\..\..\AppData\Roaming\r2modmanPlus-local\LethalCompany\profiles\mod tersting\BepInEx\plugins\MMHOOK\MMHOOK_Assembly-CSharp.dll</HintPath>
+      </Reference>
+      <Reference Include="MonoMod">
+        <HintPath>..\..\..\..\..\..\AppData\Roaming\r2modmanPlus-local\LethalCompany\profiles\mod tersting\BepInEx\patchers\Evaisa-HookGenPatcher\BepInEx.MonoMod.HookGenPatcher\MonoMod.dll</HintPath>
+      </Reference>
+      <Reference Include="MonoMod.RuntimeDetour.HookGen">
+        <HintPath>..\..\..\..\..\..\AppData\Roaming\r2modmanPlus-local\LethalCompany\profiles\mod tersting\BepInEx\patchers\Evaisa-HookGenPatcher\BepInEx.MonoMod.HookGenPatcher\MonoMod.RuntimeDetour.HookGen.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.Netcode.Runtime">
+        <HintPath>..\..\..\..\..\..\..\..\SteamLibrary\steamapps\common\Lethal Company\Lethal Company_Data\Managed\Unity.Netcode.Runtime.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+</Project>
